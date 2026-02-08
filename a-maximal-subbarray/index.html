@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*
+        The input is an array of numbers, e.g. arr = [1, -2, 3, 4, -9, 6].
+
+        The task is: find the contiguous subarray of arr with the maximal sum of items.
+        
+        If all items are negative, it means that we take none (the subarray is empty), 
+        so the sum is zero:
+        */
+
+        //create a value that is being assigned the highest number in the given array
+        //with each iteration i add +1 to index from which we start summing
+        //until a new max value is found
+       let arr = [1, -2, 3, 4, 5, -9, 6];
+       let arrMax = Math.max(...arr);
+       let contSubArray;
+       console.log(arrMax);
+       for(let i = 0; i < arr.length; i++)
+       {
+            let currentNumber = 0;
+            for(let j = i; j < arr.length; j++)
+            {
+                currentNumber += arr[j];
+                console.log(`Current i = ${i} and the current number ${currentNumber}`);
+                if(currentNumber > arrMax)
+                {
+                    
+                    arrMax = currentNumber;
+                    contSubArray = arr.slice(i, j+1);   
+                    
+                }
+            }
+       }
+       
+       console.log(contSubArray);
+       console.log(arrMax);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
