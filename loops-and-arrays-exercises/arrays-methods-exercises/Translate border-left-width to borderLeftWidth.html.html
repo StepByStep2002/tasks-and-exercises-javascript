@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function camelize(str)
+        {
+            let strArray = str.split('-');
+            console.log(strArray);
+            sliceFirstElement = strArray.slice(0, 1)
+            sliceArray = strArray.slice(1);
+
+            let camelizedArray = sliceArray.map((string, index) =>
+            {
+                
+                let firstLetter = string.charAt(0).toUpperCase();
+                let otherLetters = string.slice(1)
+                console.log(`First letter: ${firstLetter}`);
+                console.log(`Other letters: ${otherLetters}`);
+                string = firstLetter + otherLetters;
+                console.log(string);
+                return string;
+            });  
+            console.log(camelizedArray)
+            let camelizedStr = camelizedArray.join('');
+            return console.log(sliceFirstElement + camelizedStr)
+        }
+        console.log(camelize('test-text-for-function'));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

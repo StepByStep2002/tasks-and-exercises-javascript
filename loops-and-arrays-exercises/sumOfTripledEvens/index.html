@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      // Step 1: If the element is an even number
+    
+      // Step 2: Multiply this number by three
+     
+      // Step 3: Add the new number to the total
+
+let array = [1, 2, 3, 4, 5];
+let evenNums = array.filter((num) => num % 2 == 0);
+let multiplyBy3 = evenNums.map((num) => num * 3)
+let addNums = multiplyBy3.reduce((total, currentItem) => {
+    return total + currentItem;
+});
+console.log(evenNums);
+console.log(multiplyBy3);
+console.log(addNums);
+
+//or
+function sumOfTripledEvens(array) {
+  return array
+    .filter((num) => num % 2 === 0)
+    .map((num) => num * 3)
+    .reduce((acc, curr) => acc + curr);
+}
+console.log(sumOfTripledEvens(array));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

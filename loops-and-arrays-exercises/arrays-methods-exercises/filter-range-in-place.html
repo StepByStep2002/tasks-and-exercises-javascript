@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let arr = [5, 3, 8, 1]
+        function filterRangeInPlace(arr, a, b)
+        {
+            let index = 0;
+            for(let element of arr)
+            {
+                if(a >= element || b <= element)
+                {
+                    arr.splice(index, 1)
+                }
+                index++;
+            }
+        }
+
+        filterRangeInPlace(arr, 1, 4);
+        console.log(arr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

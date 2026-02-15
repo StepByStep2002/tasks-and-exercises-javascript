@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //On each new string in the 'strings' array, check if 'uniqueStrings' 
+        //doesn't have the same element
+        //If it doesn't, add this element to 'uniqueStrings', if it does, do nothing
+
+        let strings = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"];
+
+        function uniqueItems(array)
+        {   
+            let uniqueStrings = [];
+            for (const string of strings)
+            {
+                if(uniqueStrings.includes(string) == false)
+                {
+                    uniqueStrings += string + ', ';
+                }
+            }
+
+            return console.log(uniqueStrings)
+        }
+
+        uniqueItems(strings);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
